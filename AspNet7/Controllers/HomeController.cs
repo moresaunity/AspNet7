@@ -12,10 +12,6 @@ namespace AspNet7.Controllers
         {
             _logger = logger; 
             _configuration = configuration;
-
-
-
-
         }
 
         public IActionResult Index()

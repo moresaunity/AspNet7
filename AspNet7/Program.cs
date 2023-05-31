@@ -1,4 +1,5 @@
 using AspNet7.Infrastructures;
+using AspNet7.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,5 +28,8 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.UseRouting();
+app.UseSaveUserInfo();
 
 app.Run();
